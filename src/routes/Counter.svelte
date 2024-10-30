@@ -6,8 +6,10 @@
 	// svelte-ignore state_referenced_locally
 	const displayedCount = spring(count);
 
+	// let offset = $state(0);
 	$effect(() => {
 		displayedCount.set(count);
+		// offset = modulo($displayedCount, 1);
 	});
 	let offset = $derived(modulo($displayedCount, 1));
 
