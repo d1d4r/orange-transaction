@@ -1,4 +1,8 @@
-<script lang="ts">
+<script>
+	import TimeLineStepper from '$lib/components/TimeLineStepper.svelte';
+</script>
+
+<!-- <script lang="ts">
 	import { columns } from '$lib/components/payments/columns';
 	import DataTable from '$lib/components/payments/data-table.svelte';
 
@@ -11,4 +15,6 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<DataTable data={data.payments} {columns} />
+<DataTable data={data.payments} {columns} /> -->
+<p>dashboard</p>
+<TimeLineStepper />

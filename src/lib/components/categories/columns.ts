@@ -1,28 +1,28 @@
 import type { ColumnDef } from '@tanstack/table-core';
 import { createRawSnippet } from 'svelte';
 import { renderComponent, renderSnippet } from '$lib/components/ui/data-table/index.js';
-import DataTableActions from './data-table-actions.svelte';
+import DataTableActions from '../transactions/data-table-actions.svelte';
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
-export type Payment = {
+export type Category = {
 	id: string;
 	amount: number;
-	status: 'pending' | 'processing' | 'success' | 'failed';
-	email: string;
+	category: 'pending' | 'processing' | 'success' | 'failed';
+	type: string;
 };
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Category>[] = [
 	{
 		accessorKey: 'id',
 		header: '#'
 	},
 	{
-		accessorKey: 'status',
-		header: 'Status'
+		accessorKey: 'category',
+		header: 'Category'
 	},
 	{
-		accessorKey: 'email',
-		header: 'Email'
+		accessorKey: 'type',
+		header: 'Type'
 	},
 	{
 		accessorKey: 'amount',
